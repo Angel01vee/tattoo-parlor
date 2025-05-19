@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, sans-serif;
+}
+a{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.header{
+    background-color: gray;
+}
+.home-button{
+    margin-left: 50px;
+}
+.home-button:hover{
+    color: rgb(201, 193, 106);
+}
+.home-button:active{
+    color: rgb(251, 241, 140);
+}

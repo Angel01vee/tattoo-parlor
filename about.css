@@ -1,0 +1,234 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #484a47;
+  color: #333;
+  line-height: 1.6;
+  animation: fadeInBody 1s ease-in;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #484a47;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: slideDown 1s ease;
+}
+
+.logo-container .logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Navigation */
+a {
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: rgb(201, 193, 106);
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+a:active {
+  color: rgb(251, 241, 140);
+}
+
+/* Body layout */
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+/* Left and Right image sections */
+.left, .right {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 1.5s ease;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: zoomIn 1s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Center form section */
+.form-container {
+  flex: 2;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #9ea39c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.2s ease;
+}
+
+.form-container h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  animation: zoomIn 0.6s ease;
+}
+
+.slogan {
+  font-style: italic;
+  color: #ffcccb;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.form-container p {
+  margin-bottom: 10px;
+}
+
+.services a {
+  display: block;
+  margin: 4px 0;
+  padding-left: 10px;
+  color: #444;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.services a:hover {
+  transform: translateX(5px);
+  color: #ffdd57;
+}
+
+.services span {
+  color: #ffcccb;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Footer */
+.footer {
+  background-color: #9ea39c;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 30px;
+  border-top: 2px solid #ffcccb;
+  animation: fadeIn 2s ease;
+}
+
+.footer a {
+  color: #ffcccb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #ffd3d3;
+}
+
+/* Prices Button */
+.prices-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bolder;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.prices-button:hover {
+  text-decoration: underline;
+  color: #444;
+}
+
+.prices-button:active {
+  color: rgb(251, 241, 140);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .right, .form-container {
+    width: 90%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInBody {
+  from { opacity: 0; background-color: #2f2f2f; }
+  to { opacity: 1; background-color: #484a47; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Roboto;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a4a4a; /* Dark gray */
+  padding: 12px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 60px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.nav-buttons a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  color: rgb(251, 241, 140); /* Light gray hover */
+}
+
+/* Body Layout */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Container */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  width: 100%;
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #444444;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #666666;
+}
+
+/* Services and Contact Info */
+.services a,
+.contact-details p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.services a span {
+  color: #888888;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fafafa;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-form button {
+  background-color: #444444;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2f2f2f;
+}
+
+/* Image Gallery */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.portfolio-item {
+  width: 220px;
+  text-align: center;
+  animation: fadeIn 0.7s ease-in;
+}
+
+/* Map */
+.map-container iframe {
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333333;
+  color: #dddddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-buttons a {
+    margin: 10px 5px;
+    font-size: 14px;
+  }
+
+  .portfolio-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+}
+
+  
